@@ -1,1 +1,40 @@
+## 🧠 JavaScript Engine Internals & Memory Management
+
+Understanding how JavaScript works behind the scenes gives you an edge in writing better code. Here's a high-level overview:
+
+---
+
+### 🚀 JavaScript Engine Phases
+
+Whenever JavaScript sees your code, it processes it through multiple phases:
+
+1. **Tokenizing** – Breaks code into smaller pieces (tokens).
+2. **Parsing** – Creates a syntax tree (AST) from those tokens.
+3. **Interpreting** – Executes the code line by line.
+4. **Code Generation** – (Optional) Translates code into lower-level machine instructions.
+
+> You don’t need to master each phase now—just know this is how JavaScript reads and runs your code internally.
+
+---
+
+### 🧠 JavaScript Memory Management
+
+JavaScript manages memory automatically, but it's helpful to understand the underlying logic.
+
+#### 📦 Stack vs Heap
+
+- **Primitive Types** (`string`, `number`, `boolean`, `null`, `undefined`, `symbol`, `bigint`)
+  - Stored in the **Stack**
+  - Value is stored directly
+
+- **Non-Primitive Types** (`object`, `array`, `function`, etc.)
+  - Stored in the **Heap**
+  - A **reference** to the object is stored in the **Stack**
+
+```js
+// Primitive
+let a = 10;
+
+// Non-Primitive
+let person = { name: "Mushfiqur", age: 25 };
 
